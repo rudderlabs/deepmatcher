@@ -1,6 +1,6 @@
 import copy
 import logging
-from collections import Mapping
+from collections.abc import Mapping
 
 import dill
 import six
