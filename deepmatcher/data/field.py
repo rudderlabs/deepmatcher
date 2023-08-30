@@ -77,6 +77,8 @@ class FastTextBinary(vocab.Vectors):
                                 if not os.path.exists(self.backup_destination):
                                     urlretrieve(backup_url, self.backup_destination)
                                 self.destination = self.backup_destination
+                            else:
+                                raise
                     else:
                         urlretrieve(url, self.destination)
             logger.info('Extracting vectors into {}'.format(cache))
